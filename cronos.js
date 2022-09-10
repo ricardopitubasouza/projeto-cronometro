@@ -5,6 +5,7 @@ window.onload = function(){
     var appendTens = document.getElementById("tens")
     var appendSeconds = document.getElementById("seconds")
     var appendMinutes = document.getElementById("minutes")
+    var appendAlert = document.getElementById("alerta")
     var buttonStart = document.getElementById('button-start')
     var buttonStop = document.getElementById('button-stop')
     var buttonReset = document.getElementById('button-reset')
@@ -17,6 +18,10 @@ window.onload = function(){
 
     buttonStop.onclick = function() {
         clearInterval(Interval)
+        if(tens > 0){
+            appendAlert.style.backgroundColor = 'rgb(253, 6, 6)'
+            appendAlert.style.border = '1px solid rgb(52, 52, 228)'
+        }
     }
 
     buttonReset.onclick = function() {
@@ -27,6 +32,8 @@ window.onload = function(){
         appendTens.innerHTML = tens
         appendSeconds.innerHTML = seconds
         appendMinutes.innerHTML = minutes
+        appendAlert.style.backgroundColor = '#ffa600'
+        appendAlert.style.border = 'none'
     }
 
     function startTimer() {
@@ -37,6 +44,13 @@ window.onload = function(){
 
         if(tens > 9){
             appendTens.innerHTML = tens
+            if(tens < 59){
+                appendAlert.style.backgroundColor = 'rgb(253, 6, 6)'
+                appendAlert.style.border = '1px solid rgb(52, 52, 228)'
+            } else {
+                appendAlert.style.backgroundColor = '#ffa600'
+                appendAlert.style.border = 'none'
+            }
         }
         
         if(tens > 99) {  

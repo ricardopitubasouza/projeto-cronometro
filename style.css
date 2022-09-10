@@ -17,7 +17,9 @@
 :root {
     --cor1: #ffa600;
     --cor2: #f3f3f3;
-    --cor3: #fff;
+    --cor3: rgb(255, 255, 255);
+    --cor4: rgb(52, 52, 228);
+    --cor5: rgb(255, 208, 0)
 }
 
 *{
@@ -72,4 +74,11 @@ button:hover {
     background-color: var(--cor3);
     border: 1px solid var(--cor3);
     color: var(--cor1);
+}
+
+#alerta {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto;
 }
