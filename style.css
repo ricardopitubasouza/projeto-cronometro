@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face{
+    font-family: "Helvetica-Neue";
+    src: url('../fonts/HelveticaNeue Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Lucida-Grande";
+    src: url('../fonts/Lucida Grande Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor1: #ffa600;
+    --cor2: #f3f3f3;
+    --cor3: #fff;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Helvetica-Neue', 'Lucida-Grande', Arial, Helvetica, sans-serif;
+    color: var(--cor3);
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: var(--cor1);
+}
+
+.wrapper {
+    width: 800px;
+    margin: 30px auto;
+    color: var(--cor3);
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+
+#seconds, #tens{
+    font-size: 2em;
+}
+
+button {
+    border-radius: 5px;
+    background-color: var(--cor1);
+    color: var(--cor3);
+    border: 1px solid var(--cor3);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: var(--cor3);
+    border: 1px solid var(--cor3);
+    color: var(--cor1);
+}
